@@ -5,38 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Live • 9th Frame Films</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+  <meta name="theme-color" content="#000000" />
 </head>
-<body>
+<body class="live-page">
 
-<header>
-  <div class="container">
-    <div class="nav">
-      <a class="brand" href="index.html">9th Frame Films</a>
-      <nav class="navlinks">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="work.html">Work</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a class="active" href="live.html">Live</a>
-      </nav>
+<header class="live-header">
+  <div class="live-bar">
+    <a class="live-mark" href="index.html" aria-label="9th Frame Films Home">
+      <span class="live-9th">9th</span>
+      <span class="live-word">Frame Films</span>
+    </a>
+
+    <div class="live-right">
+      <span class="live-dot" aria-hidden="true"></span>
+      <span class="live-label">Live</span>
     </div>
   </div>
 </header>
 
-<main class="section">
-  <div class="container">
+<main class="live-main">
+  <section class="live-stage">
+    <iframe
+      class="live-iframe"
+      src="https://live.9thframefilms.com"
+      title="9th Frame Live"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen>
+    </iframe>
+  </section>
 
-    <div class="kicker">Live broadcast</div>
-    <h1 class="h1" style="font-size:34px;">9th Frame Live</h1>
-    <p class="sub">Real-time coverage, events, and behind-the-scenes streams.</p>
-
-    <div class="card" style="padding:0; overflow:hidden;">
-      <iframe src="https://live.9thframefilms.com" style="width:100%;aspect-ratio:16/9;border:0;"></iframe>
-    </div>
-
-  </div>
+  <footer class="live-footer">
+    <div class="live-foot-left">© <span id="year">2026</span> 9th Frame Films</div>
+    <div class="live-foot-right">Private screening link</div>
+  </footer>
 </main>
 
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

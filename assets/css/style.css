@@ -1,10 +1,10 @@
 :root{
-  --bg:#070707;
-  --panel:#0D0D0D;
-  --text:#F3F0EA;
-  --muted:#A8A8A8;
-  --accent:#B61B1B;
-  --line:rgba(243,240,234,0.12);
+  --bg:#000000;
+  --panel:#0A0A0A;
+  --text:#FFFFFF;
+  --muted:#B8B8B8;
+  --accent:#FFFFFF;
+  --line:rgba(255,255,255,0.12);
   --max:1120px;
 }
 
@@ -354,4 +354,116 @@ header{
   .project-still{grid-column:span 12; min-height:260px;}
   .project-side{grid-column:span 12; position:static;}
   .still{grid-column:span 12; min-height:220px;}
+}
+/* =========================
+   9th Frame • LIVE (Cinema)
+========================= */
+
+.live-page {
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.live-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+}
+
+.live-bar {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.live-mark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.live-9th {
+  font-size: 18px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.live-word {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.70;
+}
+
+.live-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #fff;
+  display: inline-block;
+  box-shadow: 0 0 18px rgba(255,255,255,0.35);
+}
+
+.live-main {
+  padding-top: 56px; /* header height */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.live-stage {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+
+.live-iframe {
+  width: 100vw;
+  height: calc(100vh - 56px - 44px); /* header + footer */
+  border: 0;
+  background: #000;
+}
+
+.live-footer {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 18px;
+  border-top: 1px solid rgba(255,255,255,0.10);
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(8px);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+@media (max-width: 700px) {
+  .live-word { display: none; }
+  .live-footer { justify-content: center; }
+  .live-foot-right { display: none; }
 }
