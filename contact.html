@@ -1,10 +1,132 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Untitled Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | 9th Frame Films</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-
 <body>
+
+  <!-- Use your existing header/nav here -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="index.html">9th Frame Films</a>
+      <nav class="nav">
+        <a href="services.html">Services</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contact-page">
+    <section class="container contact-hero">
+      <p class="eyebrow">Contact</p>
+      <h1>Let’s talk about the story.</h1>
+      <p class="lede">A quiet intake. I’ll respond within 24–48 hours.</p>
+    </section>
+
+    <section class="container contact-grid">
+      <aside class="contact-panel">
+        <h2>How it works</h2>
+
+        <ul class="contact-list">
+          <li><span class="label">Response</span><span class="value">24–48 hours</span></li>
+          <li><span class="label">Based in</span><span class="value">San Antonio, TX</span></li>
+          <li><span class="label">Travel</span><span class="value">Available when it makes sense</span></li>
+          <li><span class="label">Deliverables</span><span class="value">Film + edit + color</span></li>
+        </ul>
+
+        <div class="divider"></div>
+
+        <h3>Best-fit projects</h3>
+        <p class="muted">
+          Day-in-the-life films, small business brand films, events, documentary-style work, and simple live streams.
+        </p>
+
+        <div class="divider"></div>
+
+        <p class="fineprint">
+          If you have a date window and budget range, include it — it speeds everything up.
+        </p>
+      </aside>
+
+      <section class="form-panel">
+        <div class="form-head">
+          <h2>Project intake</h2>
+          <p class="muted">Enough detail to give you a real answer.</p>
+        </div>
+
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="field two">
+            <label>
+              <span>Name</span>
+              <input name="name" type="text" autocomplete="name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+          </div>
+
+          <div class="field">
+            <label>
+              <span>What are you making?</span>
+              <input name="project" type="text" placeholder="Brand film / day-in-the-life / event / doc / live stream…" required />
+            </label>
+          </div>
+
+          <div class="field two">
+            <label>
+              <span>Date window</span>
+              <input name="dateWindow" type="text" placeholder="e.g., Feb 10–Feb 20" />
+            </label>
+            <label>
+              <span>Budget range</span>
+              <input name="budget" type="text" placeholder="e.g., $700–$1,200" />
+            </label>
+          </div>
+
+          <div class="field">
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="6" placeholder="Goal, usage (IG/website/ad), location, references…" required></textarea>
+            </label>
+          </div>
+
+          <!-- Honeypot (anti-spam, invisible) -->
+          <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" />
+
+          <div class="actions">
+            <button class="btn" type="submit">Send message</button>
+            <p id="formStatus" class="status" aria-live="polite"></p>
+          </div>
+
+          <p class="fineprint">No spam. No lists. Just your message.</p>
+        </form>
+      </section>
+    </section>
+
+    <section class="container contact-footer">
+      <div class="footer-card">
+        <h3>Prefer email?</h3>
+        <p class="muted">You can reach me directly.</p>
+        <p class="email-line">
+          <a class="link" href="mailto:hello@9thframefilms.com">hello@9thframefilms.com</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© <span id="year"></span> 9th Frame Films</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/contact.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
