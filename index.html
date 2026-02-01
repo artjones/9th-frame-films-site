@@ -1,10 +1,128 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Untitled Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>9th Frame Films</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-
 <body>
+
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html">9th Frame Films</a>
+
+      <nav class="navlinks">
+        <a class="active" href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a class="btn primary" href="contact.html">Book</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="kicker">Boutique cinema • single operator</div>
+      <h1 class="h1">Cinematic films for real life.</h1>
+      <p class="sub">
+        Day-in-the-life films, small brand films, and events — shot with restraint, clean audio,
+        and strong color. No crews. No noise. Just intentional coverage.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="contact.html">Start a project</a>
+        <a class="btn" href="work.html">See work</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Services</h2>
+        <p>Simple packages. Clear deliverables.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card col-4">
+          <h3>Day-in-the-Life</h3>
+          <p>Intimate lifestyle documentary films with a cinematic finish.</p>
+        </div>
+        <div class="card col-4">
+          <h3>Brand Films</h3>
+          <p>Small business stories, promos, and culture pieces—clean and grounded.</p>
+        </div>
+        <div class="card col-4">
+          <h3>Events</h3>
+          <p>Coverage that feels like a film, not a recap. Natural sound included.</p>
+        </div>
+
+        <div class="card col-12">
+          <h3>Editing + Color</h3>
+          <p>For footage you already have. Tight edits and intentional color.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;">
+        <a class="btn" href="services.html">View all services</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+    <div class="container">
+      <div class="section-title">
+        <h2>Process</h2>
+        <p>Three steps. No chaos.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card col-4">
+          <h3>Plan</h3>
+          <p>Quick call, shot plan, location + lighting approach.</p>
+        </div>
+        <div class="card col-4">
+          <h3>Shoot</h3>
+          <p>Solo operator with an FX6 kit—efficient, low footprint.</p>
+        </div>
+        <div class="card col-4">
+          <h3>Deliver</h3>
+          <p>Clean edit, strong color, and export formats for every platform.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Ready when you are</h2>
+        <p>Tell me what you’re making.</p>
+      </div>
+      <div class="card">
+        <p style="margin:0 0 14px; color:var(--muted);">
+          The best inquiries include: date, location, what you’re filming, your goal, and where the video will live.
+        </p>
+        <a class="btn primary" href="contact.html">Contact</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    © <span id="year"></span> 9th Frame Films • San Antonio
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

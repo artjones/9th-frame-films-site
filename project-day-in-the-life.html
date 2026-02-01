@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Day-in-the-Life Film • 9th Frame Films</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html">9th Frame Films</a>
+
+      <nav class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a class="active" href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a class="btn primary" href="contact.html">Book</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="project-hero">
+    <div class="container">
+      <div class="kicker">Project</div>
+      <h1 class="h1" style="font-size:34px; margin-bottom:10px;">Day-in-the-Life Film</h1>
+      <p class="sub" style="max-width:75ch;">
+        A cinematic lifestyle documentary built around natural moments, clean audio, and intentional color.
+      </p>
+      <div style="margin-top:14px;">
+        <a class="btn" href="work.html">← Back to work</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:24px;">
+    <div class="container">
+
+      <div class="project-wrap">
+
+        <!-- Main still -->
+        <div class="project-still">
+          <div class="img" style="background-image:url('assets/img/project-diy-hero.jpg');"></div>
+        </div>
+
+        <!-- Sticky side panel -->
+        <aside class="project-side">
+          <div class="card">
+            <h3 style="margin:0 0 10px;">Details</h3>
+            <p style="margin:0; color:var(--muted);">
+              Replace these with real details once you publish the film.
+            </p>
+
+            <div class="badges">
+              <span class="badge">Lifestyle</span>
+              <span class="badge">Doc</span>
+              <span class="badge">FX6</span>
+              <span class="badge">Color grade</span>
+            </div>
+
+            <div style="margin-top:14px; color:var(--muted); font-size:14px;">
+              <div><strong style="color:var(--text); font-weight:600;">Deliverable:</strong> 3–6 min film</div>
+              <div><strong style="color:var(--text); font-weight:600;">Turnaround:</strong> 7–14 days</div>
+              <div><strong style="color:var(--text); font-weight:600;">Location:</strong> San Antonio</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 style="margin:0 0 10px;">What we did</h3>
+            <p style="margin:0; color:var(--muted);">
+              Pre-plan → low footprint shoot → clean edit → intentional color → exports for web + social.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3 style="margin:0 0 10px;">Want one?</h3>
+            <p style="margin:0 0 14px; color:var(--muted);">
+              Tell me your date, location, and what the film needs to do for you.
+            </p>
+            <a class="btn primary" href="contact.html">Start a project</a>
+          </div>
+        </aside>
+
+      </div>
+
+      <!-- Supporting stills -->
+      <div class="stills">
+        <div class="still">
+          <div class="img" style="background-image:url('assets/img/project-diy-01.jpg');"></div>
+        </div>
+        <div class="still">
+          <div class="img" style="background-image:url('assets/img/project-diy-02.jpg');"></div>
+        </div>
+        <div class="still">
+          <div class="img" style="background-image:url('assets/img/project-diy-03.jpg');"></div>
+        </div>
+      </div>
+
+      <!-- Optional text block -->
+      <div style="margin-top:16px;">
+        <div class="card">
+          <h3 style="margin:0 0 10px;">Notes</h3>
+          <p style="margin:0; color:var(--muted);">
+            Keep this short. One paragraph max. If you don’t have a write-up, delete this card.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    © <span id="year"></span> 9th Frame Films • San Antonio
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

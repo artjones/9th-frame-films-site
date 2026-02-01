@@ -1,10 +1,121 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Untitled Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work • 9th Frame Films</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-
 <body>
+
+<header>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="index.html">9th Frame Films</a>
+
+      <nav class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a class="active" href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <a class="btn primary" href="contact.html">Book</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="gallery-head">
+    <div class="container">
+      <div class="kicker">Selected work</div>
+      <h1 class="h1" style="font-size:34px;">Frames, not filler.</h1>
+      <p class="sub" style="max-width:70ch;">
+        A small selection of projects. Each thumbnail is a still from a finished film.
+        (Replace these placeholders with your real frames as you export them.)
+      </p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:18px;">
+    <div class="container">
+
+      <div class="gallery-grid">
+
+        <!-- Replace background-image URLs with your stills -->
+        <a class="thumb wide" href="#">
+          <span class="img" style="background-image:url('assets/img/work-01.jpg');"></span>
+          <span class="meta">
+            <p class="title">Day-in-the-Life</p>
+            <p class="tag">Lifestyle documentary • 4–6 min</p>
+          </span>
+        </a>
+
+		<a class="thumb" href="project-interview-james.html">
+  			<span class="img" style="background-image:url('assets/img/interview-james-hero.jpg');"></span>
+  			<span class="meta">
+    			<p class="title">Artist Interview</p>
+    			<p class="tag">James • short profile</p>
+  			</span>
+		</a>
+
+		<a class="thumb" href="project-interview-vega.html">
+  			<span class="img" style="background-image:url('assets/img/interview-vega-hero.jpg');"></span>
+  			<span class="meta">
+    			<p class="title">Artist Interview</p>
+    			<p class="tag">Vega • short profile</p>
+  			</span>
+		</a>
+
+        <a class="thumb" href="#">
+          <span class="img" style="background-image:url('assets/img/work-04.jpg');"></span>
+          <span class="meta">
+            <p class="title">Portrait Piece</p>
+            <p class="tag">Short profile • interview + b-roll</p>
+          </span>
+        </a>
+
+        <a class="thumb wide" href="#">
+          <span class="img" style="background-image:url('assets/img/work-05.jpg');"></span>
+          <span class="meta">
+            <p class="title">Culture Film</p>
+            <p class="tag">Community • cinematic recap</p>
+          </span>
+        </a>
+
+        <a class="thumb" href="#">
+          <span class="img" style="background-image:url('assets/img/work-06.jpg');"></span>
+          <span class="meta">
+            <p class="title">Commercial</p>
+            <p class="tag">Product • clean, minimal</p>
+          </span>
+        </a>
+
+      </div>
+
+      <div style="margin-top:22px;">
+        <div class="card">
+          <h3 style="margin:0 0 8px; font-size:14px; letter-spacing:.12em; text-transform:uppercase;">Want something like this?</h3>
+          <p style="margin:0 0 14px; color:var(--muted);">
+            Tell me what you’re making and where it needs to live (website, reels, YouTube, ads).
+          </p>
+          <a class="btn primary" href="contact.html">Start a project</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    © <span id="year"></span> 9th Frame Films • San Antonio
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
