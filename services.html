@@ -1,10 +1,195 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Untitled Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work With Me | 9th Frame Films</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-
 <body>
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a class="wordmark" href="index.html">9th Frame Films</a>
+
+    <nav class="nav navlinks">
+      <a href="work.html">Films</a>
+      <a class="active" href="services.html">Work</a>
+      <a href="live.html">Live</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+  </div>
+</header>
+
+
+  <main class="services-page">
+
+    <!-- HERO -->
+    <section class="container services-hero">
+      <p class="eyebrow">Work With Me</p>
+      <h1 class="h1">Films, not content.</h1>
+      <p class="sub">
+        I’m a filmmaker and cinematographer with a small, independent setup — built for story-driven work.
+        If you want something clean, intentional, and worth watching twice, we’ll move well together.
+      </p>
+
+      <div class="cta">
+        <a class="btn primary" href="contact.html">Project intake</a>
+        <a class="btn" href="work.html">View films</a>
+      </div>
+    </section>
+
+    <!-- TWO LANES -->
+    <section class="container section">
+      <div class="services-split">
+
+        <!-- LANE A -->
+        <div class="lane">
+          <div class="lane-head">
+            <h2>Commissioned Films</h2>
+            <p class="muted">Client work with a cinematic finish.</p>
+          </div>
+
+          <div class="grid">
+            <div class="card col-6">
+              <h3>Brand Films</h3>
+              <p>
+                Documentary-style films for businesses, studios, and creators.
+                Built for your website, socials, and ads — with real story and clean visuals.
+              </p>
+            </div>
+
+            <div class="card col-6">
+              <h3>Event Films</h3>
+              <p>
+                Not coverage — atmosphere. A film that captures energy, people, and the moments that matter.
+                Clean audio, clean edit, clean color.
+              </p>
+            </div>
+
+            <div class="card col-6">
+              <h3>Music Videos</h3>
+              <p>
+                Cinematic visuals with direction and mood. Treated like a short film,
+                not a quick promo. Concepts welcome.
+              </p>
+            </div>
+
+            <div class="card col-6">
+              <h3>Documentary Work</h3>
+              <p>
+                Interviews, vérité, and story capture for ongoing projects, profiles, and community stories.
+                Quiet sets. Real moments.
+              </p>
+            </div>
+          </div>
+
+          <div class="lane-note">
+            <p class="fineprint">
+              Ideal for: artists, studios, small businesses, community orgs, and teams that value story and tone.
+            </p>
+          </div>
+        </div>
+
+        <!-- LANE B -->
+        <div class="lane">
+          <div class="lane-head">
+            <h2>Indie Filmmaker Support</h2>
+            <p class="muted">For directors, artists, and small crews.</p>
+          </div>
+
+          <div class="grid">
+            <div class="card col-6">
+              <h3>Cinematography</h3>
+              <p>
+                Solo operator (or small crew) built for indie sets. Clean lighting, disciplined framing,
+                and a consistent look from set to final.
+              </p>
+            </div>
+
+            <div class="card col-6">
+              <h3>Editing & Color</h3>
+              <p>
+                Tight pacing, clean sound workflow, and a finished grade.
+                Great for shorts, music videos, and branded pieces.
+              </p>
+            </div>
+
+            <div class="card col-6">
+              <h3>Screenwriting</h3>
+              <p>
+                Original scripts, co-writing, and rewrites. If you have a concept,
+                I can help shape it into a shootable story.
+              </p>
+            </div>
+
+            <div class="card col-6">
+              <h3>Story Development</h3>
+              <p>
+                Structure, scene feedback, and pre-production planning:
+                shotlists, mood boards, and visual direction that protects the story.
+              </p>
+            </div>
+          </div>
+
+          <div class="lane-note">
+            <p class="fineprint">
+              Ideal for: indie directors, musicians, creators, and first-time filmmakers who want a stronger finish.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="container section">
+      <div class="section-title">
+        <h2>Process</h2>
+        <p>Simple. Clear. Professional.</p>
+      </div>
+
+      <div class="grid">
+        <div class="card col-4">
+          <h3>1 — Intake</h3>
+          <p>Goal, date window, budget range, and references. Enough detail to give you a real answer.</p>
+        </div>
+        <div class="card col-4">
+          <h3>2 — Plan</h3>
+          <p>We align on story, tone, and deliverables. If needed: shot list, schedule, and locations.</p>
+        </div>
+        <div class="card col-4">
+          <h3>3 — Shoot + Finish</h3>
+          <p>Capture with intention. Edit with restraint. Final delivery optimized for web and social.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container section services-cta">
+      <div class="card col-12">
+        <h3>Tell me what you’re trying to make.</h3>
+        <p class="muted">
+          If you include a date window and budget range, I can respond with a real plan instead of questions.
+        </p>
+        <div class="cta" style="margin-top:14px;">
+          <a class="btn primary" href="contact.html">Project intake</a>
+          <a class="btn" href="contact.html">Email instead</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="muted">© <span id="year"></span> 9th Frame Films</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
