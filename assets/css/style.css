@@ -2,10 +2,13 @@
   --ink:#13100F;
   --bone:#F5EFEA;
   --muted:#858280;
+
   --bg:var(--ink);
   --text:var(--bone);
   --panel:#1A1716;
   --line:rgba(245,239,234,0.12);
+
+  --max:1120px;
 }
 
 *{box-sizing:border-box}
@@ -29,31 +32,41 @@ a:hover{opacity:.92}
   padding:0 20px;
 }
 
-/* Header / Nav */
-header{
+/* =========================
+   Header / Nav (matches your HTML)
+   <header class="site-header">
+     <div class="container header-inner">
+       <a class="wordmark">...</a>
+       <nav class="nav"><a class="active">...</a></nav>
+     </div>
+   </header>
+========================= */
+
+.site-header{
   position:sticky;
   top:0;
   z-index:50;
-  background: rgba(19,16,15,.78); /* ink glass */
-  backdrop-filter: blur(10px);
+  background:rgba(19,16,15,.78);
+  backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line);
 }
 
-.nav{
+.header-inner{
   display:flex;
   align-items:center;
   justify-content:space-between;
   padding:16px 0;
+  gap:18px;
 }
 
-.brand{
+.wordmark{
   font-weight:700;
   letter-spacing:.12em;
   text-transform:uppercase;
   font-size:13px;
 }
 
-.navlinks{
+.site-header .nav{
   display:flex;
   gap:18px;
   align-items:center;
@@ -63,11 +76,17 @@ header{
   color:var(--muted);
 }
 
-.navlinks a.active{color:var(--text)}
-.navlinks a:hover{color:var(--text)}
+.site-header .nav a.active{color:var(--text)}
+.site-header .nav a:hover{color:var(--text)}
+
+/* Responsive nav */
+@media (max-width:900px){
+  .site-header .nav{display:none}
+}
 
 /* =========================
    Buttons — Outline (Cinema)
+   (GLOBAL button style)
 ========================= */
 
 .btn{
@@ -87,6 +106,7 @@ header{
   letter-spacing:.10em;
   text-transform:uppercase;
 
+  cursor:pointer;
   transition:all .2s ease;
 }
 
@@ -103,7 +123,10 @@ header{
   color:var(--bone);
 }
 
-/* Hero */
+/* =========================
+   Hero (generic)
+========================= */
+
 .hero{
   padding:84px 0 40px;
   border-bottom:1px solid var(--line);
@@ -157,7 +180,7 @@ header{
   font-size:13px;
 }
 
-/* Grid / Cards */
+/* Grid / Cards (generic utility) */
 .grid{
   display:grid;
   grid-template-columns:repeat(12,1fr);
@@ -188,7 +211,15 @@ header{
 .col-6{grid-column:span 6}
 .col-12{grid-column:span 12}
 
+/* Responsive utilities */
+@media (max-width:900px){
+  .h1{font-size:36px}
+  .col-4{grid-column:span 12}
+  .col-6{grid-column:span 12}
+}
+
 /* Footer */
+.site-footer,
 .footer{
   border-top:1px solid var(--line);
   padding:28px 0;
@@ -196,17 +227,10 @@ header{
   font-size:13px;
 }
 
-/* Responsive */
-@media (max-width: 900px){
-  .h1{font-size:36px}
-  .navlinks{display:none}
-  .col-4{grid-column:span 12}
-  .col-6{grid-column:span 12}
-}
-
 /* =========================
-   Work / Gallery
+   Work / Gallery (your Works page grid)
 ========================= */
+
 .gallery-head{padding:44px 0 18px}
 
 .gallery-grid{
@@ -229,7 +253,7 @@ header{
   width:100%;
   height:100%;
   display:block;
-  background: #111;
+  background:#111;
   position:absolute;
   inset:0;
   background-size:cover;
@@ -282,19 +306,20 @@ header{
   transform:translateY(0);
 }
 
-/* size variety (optional but aesthetic) */
+/* size variety (optional) */
 .thumb.wide{grid-column:span 8; min-height:260px;}
 .thumb.tall{grid-column:span 4; min-height:340px;}
 
 /* mobile */
-@media (max-width: 900px){
+@media (max-width:900px){
   .thumb{grid-column:span 12; min-height:240px;}
   .thumb.wide,.thumb.tall{grid-column:span 12; min-height:240px;}
 }
 
 /* =========================
-   Project page
+   Project page (still page)
 ========================= */
+
 .project-hero{
   padding:44px 0 26px;
   border-bottom:1px solid var(--line);
@@ -383,56 +408,59 @@ header{
 
 /* =========================
    LIVE PAGE (with site nav)
-   Ink/Bone cinema vibe
 ========================= */
+
 .live-section{
-  background: var(--ink);
-  min-height: 100vh;
-  padding: 60px 0 80px;
+  background:var(--ink);
+  min-height:100vh;
+  padding:60px 0 80px;
 }
 
 .live-wrapper{
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 20px;
 }
 
 .live-title{
-  text-align: center;
-  margin-bottom: 30px;
+  text-align:center;
+  margin-bottom:30px;
 }
 
 .live-title h1{
-  font-size: 28px;
-  color: var(--bone);
-  letter-spacing: 0.10em;
-  text-transform: uppercase;
-  margin: 0 0 10px;
+  font-size:28px;
+  color:var(--bone);
+  letter-spacing:.10em;
+  text-transform:uppercase;
+  margin:0 0 10px;
 }
 
 .live-title p{
-  color: var(--muted);
-  font-size: 14px;
-  margin: 0;
+  color:var(--muted);
+  font-size:14px;
+  margin:0;
 }
 
 .live-player{
-  background: var(--ink);
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 0 46px rgba(0,0,0,0.65);
+  background:var(--ink);
+  border:1px solid var(--line);
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 0 46px rgba(0,0,0,0.65);
 }
 
 .live-player iframe{
-  width: 100%;
-  aspect-ratio: 16/9;
-  border: 0;
-  display: block;
-  background: var(--ink);
+  width:100%;
+  aspect-ratio:16/9;
+  border:0;
+  display:block;
+  background:var(--ink);
 }
 
-/* CONTACT — 9th Frame */
+/* =========================
+   CONTACT — 9th Frame (single source of truth)
+   (No duplicates, no global btn overrides)
+========================= */
 
 .contact-page{ padding:54px 0 72px; }
 
@@ -532,7 +560,8 @@ header{
 }
 @media (max-width:560px){ .field.two{ grid-template-columns:1fr; } }
 
-input,textarea{
+.contact-form input,
+.contact-form textarea{
   width:100%;
   background:rgba(0,0,0,0.18);
   color:var(--text);
@@ -543,8 +572,9 @@ input,textarea{
   font-size:15px;
   line-height:1.4;
 }
-textarea{ resize:vertical; min-height:140px; }
-input:focus,textarea:focus{ border-color:rgba(245,239,234,0.26); }
+.contact-form textarea{ resize:vertical; min-height:140px; }
+.contact-form input:focus,
+.contact-form textarea:focus{ border-color:rgba(245,239,234,0.26); }
 
 .actions{
   display:flex;
@@ -553,26 +583,29 @@ input:focus,textarea:focus{ border-color:rgba(245,239,234,0.26); }
   margin-top:6px;
 }
 
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:12px 14px;
+/* Contact-specific button styling only */
+.contact-form .btn{
   border-radius:12px;
+  padding:12px 14px;
   border:1px solid rgba(245,239,234,0.12);
   background:var(--text);
   color:var(--bg);
   font-weight:650;
-  cursor:pointer;
+  letter-spacing:0;
+  text-transform:none;
   transition:transform .06s ease, opacity .12s ease;
 }
-.btn:hover{ opacity:.92; }
-.btn:active{ transform:translateY(1px); }
-.btn:disabled{ opacity:.55; cursor:not-allowed; }
+.contact-form .btn:hover{ opacity:.92; background:var(--text); }
+.contact-form .btn:active{ transform:translateY(1px); }
+.contact-form .btn:disabled{ opacity:.55; cursor:not-allowed; }
 
-.status{ margin:0; font-size:14px; color:rgba(245,239,234,0.78); }
-.status.ok{ color:rgba(245,239,234,0.90); }
-.status.err{ color:rgba(245,239,234,0.90); }
+.status{
+  margin:0;
+  font-size:14px;
+  color:rgba(245,239,234,0.78);
+}
+.status.success{ color:#7fd48a; }
+.status.error{ color:#ff7a7a; }
 
 .fineprint{
   margin:8px 0 0;
@@ -593,7 +626,7 @@ input:focus,textarea:focus{ border-color:rgba(245,239,234,0.26); }
 }
 .link:hover{ border-bottom-color:rgba(245,239,234,0.55); }
 
-/* honeypot hidden */
+/* honeypot hidden (accessible + reliable) */
 .hp{
   position:absolute !important;
   left:-9999px !important;
