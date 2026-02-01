@@ -1,10 +1,205 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>about</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About | 9th Frame Films</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-
 <body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="index.html">9th Frame Films</a>
+    <nav class="nav">
+      <a href="services.html">Work</a>
+      <a href="work.html">Films</a>
+      <a class="active" href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="about-page">
+
+  <!-- HERO -->
+  <section class="container about-hero">
+    <p class="eyebrow">About</p>
+
+    <h1 class="h1">
+      I don’t make content.<br>
+      I make films.
+    </h1>
+
+    <p class="sub">
+      9th Frame Films is a small, independent studio led by Anthony Jones —
+      a filmmaker, cinematographer, and screenwriter focused on
+      story-driven, cinematic work rooted in real people and lived experience.
+    </p>
+  </section>
+
+
+  <!-- PHILOSOPHY -->
+  <section class="container section">
+    <div class="section-title">
+      <h2>Philosophy</h2>
+      <p>Quiet. Intentional. Human.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card col-6">
+        <h3>Story first</h3>
+        <p>
+          Every project starts with people, not gear.  
+          The goal isn’t coverage or “content” — it’s meaning.  
+          Images should feel lived-in, not performed.
+        </p>
+      </div>
+
+      <div class="card col-6">
+        <h3>Cinematic by design</h3>
+        <p>
+          Natural light. Controlled movement. Clean color.  
+          Simple setups that let moments breathe.  
+          Film language over trends.
+        </p>
+      </div>
+
+      <div class="card col-6">
+        <h3>Small crew energy</h3>
+        <p>
+          Most productions are solo or minimal by choice.  
+          Smaller sets feel calmer, more honest, and less intrusive —
+          which leads to better performances and real reactions.
+        </p>
+      </div>
+
+      <div class="card col-6">
+        <h3>Independent spirit</h3>
+        <p>
+          Built outside of agencies and production houses.  
+          Direct collaboration. Fewer layers. Clear intent.  
+          The work stays personal.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FILMMAKER IDENTITY -->
+  <section class="container section">
+    <div class="section-title">
+      <h2>Filmmaker</h2>
+      <p>Original stories and narrative work</p>
+    </div>
+
+    <div class="grid">
+      <div class="card col-6">
+        <h3>Narrative films</h3>
+        <p>
+          Character-driven dramas, horror, and grounded genre pieces exploring
+          legacy, labor, identity, and survival.  
+          Stories about people who rarely get centered on screen.
+        </p>
+      </div>
+
+      <div class="card col-6">
+        <h3>Screenwriting</h3>
+        <p>
+          Original features and shorts developed from concept to script.  
+          Available for writing, co-writing, and story development for indie filmmakers,
+          artists, and collaborators.
+        </p>
+      </div>
+
+      <div class="card col-6">
+        <h3>Music videos</h3>
+        <p>
+          Cinematic, mood-driven visuals for artists who want something intentional —
+          not disposable. Built like short films, not promos.
+        </p>
+      </div>
+
+      <div class="card col-6">
+        <h3>Directed pieces</h3>
+        <p>
+          Concept films, experimental work, and passion projects where style,
+          atmosphere, and storytelling lead the process.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- COLLABORATION / SERVICES (money side, but positioned second) -->
+  <section class="container section">
+    <div class="section-title">
+      <h2>Collaborations</h2>
+      <p>Professional production work</p>
+    </div>
+
+    <div class="grid">
+      <div class="card col-4">
+        <h3>Brand films</h3>
+        <p>Documentary-style films for small businesses, studios, and creators.</p>
+      </div>
+
+      <div class="card col-4">
+        <h3>Event films</h3>
+        <p>Clean, story-driven highlights that feel cinematic — not coverage.</p>
+      </div>
+
+      <div class="card col-4">
+        <h3>Editing & color</h3>
+        <p>Post-production, pacing, and grading for filmmakers and brands.</p>
+      </div>
+
+      <div class="card col-4">
+        <h3>Cinematography</h3>
+        <p>Solo operator with a cinema camera and minimal lighting kit.</p>
+      </div>
+
+      <div class="card col-4">
+        <h3>Story development</h3>
+        <p>Concept shaping, visual planning, and pre-production support.</p>
+      </div>
+
+      <div class="card col-4">
+        <h3>Small crew production</h3>
+        <p>Lean, efficient shoots designed for indie budgets and real spaces.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CLOSING -->
+  <section class="container section">
+    <div class="card col-12">
+      <h3>Let’s build something that lasts.</h3>
+      <p class="muted">
+        Whether it’s an original film, a music video, or a brand story,
+        the goal is the same — make something honest, intentional, and worth watching twice.
+      </p>
+
+      <div class="cta" style="margin-top:14px;">
+        <a class="btn primary" href="contact.html">Start a project</a>
+        <a class="btn" href="work.html">View films</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="muted">© <span id="year"></span> 9th Frame Films</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
