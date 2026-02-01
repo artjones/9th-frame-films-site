@@ -5,43 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Live • 9th Frame Films</title>
   <link rel="stylesheet" href="assets/css/style.css" />
-  <meta name="theme-color" content="#000000" />
 </head>
-<body class="live-page">
 
-<header class="live-header">
-  <div class="live-bar">
-    <a class="live-mark" href="index.html" aria-label="9th Frame Films Home">
-      <span class="live-9th">9th</span>
-      <span class="live-word">Frame Films</span>
-    </a>
+<body>
 
-    <div class="live-right">
-      <span class="live-dot" aria-hidden="true"></span>
-      <span class="live-label">Live</span>
+<!-- ===== NORMAL SITE HEADER (same as other pages) ===== -->
+<header>
+  <div class="container">
+    <div class="nav">
+
+      <a class="brand" href="index.html">
+        9th Frame Films
+      </a>
+
+      <nav class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="work.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a class="active" href="live.html">Live</a>
+      </nav>
+
     </div>
   </div>
 </header>
 
-<main class="live-main">
-  <section class="live-stage">
-    <iframe
-      class="live-iframe"
-      src="https://live.9thframefilms.com"
-      title="9th Frame Live"
-      allow="autoplay; fullscreen; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </section>
 
-  <footer class="live-footer">
-    <div class="live-foot-left">© <span id="year">2026</span> 9th Frame Films</div>
-    <div class="live-foot-right">Private screening link</div>
-  </footer>
+<!-- ===== LIVE SECTION ===== -->
+<main class="live-section">
+
+  <div class="live-wrapper">
+
+    <div class="live-title">
+      <h1>9th Frame Live</h1>
+      <p>Private broadcasts & behind-the-scenes streams</p>
+    </div>
+
+    <div class="live-player">
+      <iframe
+        src="https://live.9thframefilms.com"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+  </div>
+
 </main>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
 </body>
 </html>

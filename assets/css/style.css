@@ -467,3 +467,52 @@ header{
   .live-footer { justify-content: center; }
   .live-foot-right { display: none; }
 }
+
+/* =========================
+   Live Page Styling
+   Black cinema vibe
+========================= */
+
+.live-section {
+  background: #000;
+  min-height: 100vh;
+  padding: 60px 0 80px;
+}
+
+.live-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.live-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.live-title h1 {
+  font-size: 28px;
+  color: #fff;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.live-title p {
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+}
+
+.live-player {
+  background: #000;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+.live-player iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: 0;
+  display: block;
+}
