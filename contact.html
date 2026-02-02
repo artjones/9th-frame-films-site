@@ -8,22 +8,19 @@
 </head>
 <body>
 
-<header class="site-header">
-  <div class="container header-inner">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="index.html">9th Frame Films</a>
 
-    <a class="wordmark" href="index.html">9th Frame Films</a>
-
-    <nav class="nav navlinks">
-      <a href="work.html">Films</a>
-      <a href="services.html">Work</a>
-      <a href="live.html">Live</a>
-      <a href="about.html">About</a>
-      <a class="active" href="contact.html">Contact</a>
-    </nav>
-
-  </div>
-</header>
-
+      <nav class="nav navlinks">
+        <a href="work.html">Films</a>
+        <a href="services.html">Work</a>
+        <a href="live.html">Live</a>
+        <a href="about.html">About</a>
+        <a class="active" href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
   <main class="contact-page">
     <section class="container contact-hero">
@@ -65,43 +62,86 @@
 
         <form id="contactForm" class="contact-form" novalidate>
           <div class="field two">
-            <label>
+            <label for="contactName">
               <span>Name</span>
-              <input name="name" type="text" autocomplete="name" required />
+              <input
+                id="contactName"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+              />
             </label>
-            <label>
+
+            <label for="contactEmail">
               <span>Email</span>
-              <input name="email" type="email" autocomplete="email" required />
+              <input
+                id="contactEmail"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+              />
             </label>
           </div>
 
           <div class="field">
-            <label>
+            <label for="contactProject">
               <span>What are you making?</span>
-              <input name="project" type="text" placeholder="Brand film / day-in-the-life / event / doc / live stream…" required />
+              <input
+                id="contactProject"
+                name="project"
+                type="text"
+                placeholder="Brand film / day-in-the-life / event / doc / live stream…"
+                required
+              />
             </label>
           </div>
 
           <div class="field two">
-            <label>
+            <label for="contactDateWindow">
               <span>Date window</span>
-              <input name="dateWindow" type="text" placeholder="e.g., Feb 10–Feb 20" />
+              <input
+                id="contactDateWindow"
+                name="dateWindow"
+                type="text"
+                placeholder="e.g., Feb 10–Feb 20"
+              />
             </label>
-            <label>
+
+            <label for="contactBudget">
               <span>Budget range</span>
-              <input name="budget" type="text" placeholder="e.g., $700–$1,200" />
+              <input
+                id="contactBudget"
+                name="budget"
+                type="text"
+                placeholder="e.g., $700–$1,200"
+              />
             </label>
           </div>
 
           <div class="field">
-            <label>
+            <label for="contactMessage">
               <span>Message</span>
-              <textarea name="message" rows="6" placeholder="Goal, usage (IG/website/ad), location, references…" required></textarea>
+              <textarea
+                id="contactMessage"
+                name="message"
+                rows="6"
+                placeholder="Goal, usage (IG/website/ad), location, references…"
+                required
+              ></textarea>
             </label>
           </div>
 
           <!-- Honeypot (anti-spam, invisible) -->
-          <input class="hp" type="text" name="company" tabindex="-1" autocomplete="off" />
+          <input
+            class="hp"
+            type="text"
+            name="company"
+            tabindex="-1"
+            autocomplete="off"
+            aria-hidden="true"
+          />
 
           <div class="actions">
             <button class="btn" type="submit">Send message</button>
@@ -109,6 +149,9 @@
           </div>
 
           <p class="fineprint">No spam. No lists. Just your message.</p>
+
+          <!-- Debug marker (safe to delete later) -->
+          <p class="fineprint" id="jsMarker" style="opacity:.6; display:none;">JS loaded.</p>
         </form>
       </section>
     </section>
@@ -131,6 +174,11 @@
   </footer>
 
   <script src="assets/js/contact.js"></script>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    // Debug marker (safe to delete later)
+    var m = document.getElementById("jsMarker");
+    if (m) m.style.display = "block";
+  </script>
 </body>
 </html>

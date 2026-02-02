@@ -80,10 +80,13 @@ a:hover{opacity:.92}
 .site-header .nav a:hover{color:var(--text)}
 
 /* Responsive nav */
-@media (max-width:900px){
-  .site-header .nav{display:none}
-}
-
+@media (max-width: 900px){
+  .navlinks{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    justify-content:flex-end;
+  }
 /* =========================
    Buttons — Outline (Cinema)
    (GLOBAL button style)
