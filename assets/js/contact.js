@@ -2,8 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   console.log("contact.js loaded");
 
   var form = document.getElementById("contactForm");
-  var status = document.getElementById("formStatus");
-
+var status = document.getElementById("contactStatus");
   if (!form) {
     console.error("Form not found (#contactForm)");
     return;
