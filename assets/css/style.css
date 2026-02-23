@@ -5,8 +5,12 @@
 
   --bg:var(--ink);
   --text:var(--bone);
+
   --panel:#1A1716;
   --line:rgba(245,239,234,0.12);
+
+  --record-red:#E73131;
+  --teal:#2FAFA3;
 
   --max:1120px;
 }
@@ -33,13 +37,7 @@ a:hover{opacity:.92}
 }
 
 /* =========================
-   Header / Nav (matches your HTML)
-   <header class="site-header">
-     <div class="container header-inner">
-       <a class="wordmark">...</a>
-       <nav class="nav"><a class="active">...</a></nav>
-     </div>
-   </header>
+   Header / Nav
 ========================= */
 
 .site-header{
@@ -75,18 +73,17 @@ a:hover{opacity:.92}
   text-transform:uppercase;
   color:var(--muted);
 }
-
 .site-header .nav a.active{color:var(--text)}
 .site-header .nav a:hover{color:var(--text)}
 
-/* Responsive nav */
 @media (max-width:900px){
   .site-header .nav{display:none}
 }
 
 /* =========================
-   Buttons — Outline (Cinema)
-   (GLOBAL button style)
+   Buttons (GLOBAL)
+   - Outline cinema button used site-wide
+   - Contact form has its own button styling below
 ========================= */
 
 .btn{
@@ -107,21 +104,22 @@ a:hover{opacity:.92}
   text-transform:uppercase;
 
   cursor:pointer;
-  transition:all .2s ease;
+  transition:background .2s ease, border-color .2s ease, transform .15s ease, opacity .2s ease;
 }
 
-/* primary now SAME as outline */
 .btn.primary{
   background:transparent;
   border:1px solid var(--bone);
   color:var(--bone);
 }
 
-/* hover = subtle fill */
 .btn:hover{
   background:rgba(245,239,234,0.08);
   color:var(--bone);
 }
+
+.btn:active{ transform:translateY(1px); }
+.btn:disabled{ opacity:.55; cursor:not-allowed; }
 
 /* =========================
    Hero (generic)
@@ -211,7 +209,6 @@ a:hover{opacity:.92}
 .col-6{grid-column:span 6}
 .col-12{grid-column:span 12}
 
-/* Responsive utilities */
 @media (max-width:900px){
   .h1{font-size:36px}
   .col-4{grid-column:span 12}
@@ -228,7 +225,7 @@ a:hover{opacity:.92}
 }
 
 /* =========================
-   Work / Gallery (your Works page grid)
+   Work / Gallery
 ========================= */
 
 .gallery-head{padding:44px 0 18px}
@@ -306,11 +303,9 @@ a:hover{opacity:.92}
   transform:translateY(0);
 }
 
-/* size variety (optional) */
 .thumb.wide{grid-column:span 8; min-height:260px;}
 .thumb.tall{grid-column:span 4; min-height:340px;}
 
-/* mobile */
 @media (max-width:900px){
   .thumb{grid-column:span 12; min-height:240px;}
   .thumb.wide,.thumb.tall{grid-column:span 12; min-height:240px;}
@@ -407,7 +402,7 @@ a:hover{opacity:.92}
 }
 
 /* =========================
-   LIVE PAGE (with site nav)
+   LIVE PAGE
 ========================= */
 
 .live-section{
@@ -458,8 +453,7 @@ a:hover{opacity:.92}
 }
 
 /* =========================
-   CONTACT — 9th Frame (single source of truth)
-   (No duplicates, no global btn overrides)
+   CONTACT — Single source of truth
 ========================= */
 
 .contact-page{ padding:54px 0 72px; }
@@ -526,6 +520,7 @@ a:hover{opacity:.92}
   display:grid;
   gap:10px;
 }
+
 .contact-list li{
   display:grid;
   grid-template-columns:110px 1fr;
@@ -535,14 +530,17 @@ a:hover{opacity:.92}
   border-radius:12px;
   background:rgba(0,0,0,0.12);
 }
+
 .contact-list .label{
   font-size:12px;
   letter-spacing:.12em;
   text-transform:uppercase;
   opacity:.75;
 }
+
 .contact-list .value{ color:rgba(245,239,234,0.88); }
 
+/* Form layout */
 .contact-form{ display:grid; gap:12px; }
 
 .field label{ display:grid; gap:8px; }
@@ -560,8 +558,10 @@ a:hover{opacity:.92}
 }
 @media (max-width:560px){ .field.two{ grid-template-columns:1fr; } }
 
+/* Inputs */
 .contact-form input,
-.contact-form textarea{
+.contact-form textarea,
+.contact-form select{
   width:100%;
   background:rgba(0,0,0,0.18);
   color:var(--text);
@@ -572,61 +572,17 @@ a:hover{opacity:.92}
   font-size:15px;
   line-height:1.4;
 }
+
 .contact-form textarea{ resize:vertical; min-height:140px; }
+
 .contact-form input:focus,
-.contact-form textarea:focus{ border-color:rgba(245,239,234,0.26); }
-
-.actions{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  margin-top:6px;
+.contact-form textarea:focus,
+.contact-form select:focus{
+  border-color:rgba(245,239,234,0.26);
+  box-shadow:0 0 0 3px rgba(245,239,234,0.06);
 }
 
-/* Contact-specific button styling only */
-.contact-form .btn{
-  border-radius:12px;
-  padding:12px 14px;
-  border:1px solid rgba(245,239,234,0.12);
-  background:var(--text);
-  color:var(--bg);
-  font-weight:650;
-  letter-spacing:0;
-  text-transform:none;
-  transition:transform .06s ease, opacity .12s ease;
-}
-.contact-form .btn:hover{ opacity:.92; background:var(--text); }
-.contact-form .btn:active{ transform:translateY(1px); }
-.contact-form .btn:disabled{ opacity:.55; cursor:not-allowed; }
-
-.status{
-  margin:0;
-  font-size:14px;
-  color:rgba(245,239,234,0.78);
-}
-.status.success{ color:#7fd48a; }
-.status.error{ color:#ff7a7a; }
-
-.fineprint{
-  margin:8px 0 0;
-  font-size:13px;
-  color:rgba(245,239,234,0.62);
-}
-
-.contact-footer{ margin-top:18px; }
-.footer-card{
-  background:rgba(0,0,0,0.16);
-  border:1px solid rgba(245,239,234,0.10);
-  border-radius:16px;
-  padding:18px;
-}
-.email-line{ margin:10px 0 0; }
-.link{
-  border-bottom:1px solid rgba(245,239,234,0.28);
-}
-.link:hover{ border-bottom-color:rgba(245,239,234,0.55); }
-
-/* honeypot hidden (accessible + reliable) */
+/* Honeypot hidden (your .hp class) */
 .hp{
   position:absolute !important;
   left:-9999px !important;
@@ -634,6 +590,118 @@ a:hover{opacity:.92}
   height:1px !important;
   opacity:0 !important;
 }
+
+/* Actions row */
+.actions{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-top:6px;
+  flex-wrap:wrap;
+}
+
+/* ✅ Updated Contact Button
+   Bone default, Recording Red hover
+   Applies whether you use class="btn" or not */
+.contact-form button[type="submit"],
+.contact-form input[type="submit"]{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+
+  border-radius:12px;
+  padding:12px 16px;
+
+  background:var(--bone);
+  color:var(--bg);
+
+  border:1px solid rgba(245,239,234,0.12);
+
+  font-weight:650;
+  font-size:14px;
+  letter-spacing:0;
+  text-transform:none;
+
+  cursor:pointer;
+  transition:background .18s ease, color .18s ease, transform .06s ease, opacity .12s ease;
+}
+
+.contact-form button[type="submit"]:hover,
+.contact-form input[type="submit"]:hover{
+  background:var(--record-red);
+  color:var(--bone);
+}
+
+.contact-form button[type="submit"]:active,
+.contact-form input[type="submit"]:active{
+  transform:translateY(1px);
+}
+
+.contact-form button[type="submit"]:focus-visible,
+.contact-form input[type="submit"]:focus-visible{
+  outline:2px solid var(--record-red);
+  outline-offset:2px;
+}
+
+/* Disabled / loading */
+.contact-form button[type="submit"][disabled],
+.contact-form button[type="submit"].is-loading,
+.contact-form input[type="submit"][disabled]{
+  opacity:.55;
+  cursor:not-allowed;
+  transform:none;
+}
+
+/* Optional spinner support (works with upgraded JS) */
+.contact-form .btn-spinner{
+  display:none;
+  width:14px;
+  height:14px;
+  border:2px solid currentColor;
+  border-top-color:transparent;
+  border-radius:50%;
+  animation:spin .8s linear infinite;
+}
+
+.contact-form button.is-loading .btn-spinner{
+  display:inline-block;
+}
+
+@keyframes spin{ to{ transform:rotate(360deg); } }
+
+/* Status */
+.status{
+  margin:0;
+  font-size:14px;
+  color:rgba(245,239,234,0.78);
+  opacity:1;
+}
+.status.success{ color:var(--teal); }
+.status.error{ color:var(--record-red); }
+
+.fineprint{
+  margin:8px 0 0;
+  font-size:13px;
+  color:rgba(245,239,234,0.62);
+}
+
+/* Contact footer */
+.contact-footer{ margin-top:18px; }
+
+.footer-card{
+  background:rgba(0,0,0,0.16);
+  border:1px solid rgba(245,239,234,0.10);
+  border-radius:16px;
+  padding:18px;
+}
+
+.email-line{ margin:10px 0 0; }
+
+.link{
+  border-bottom:1px solid rgba(245,239,234,0.28);
+}
+.link:hover{ border-bottom-color:rgba(245,239,234,0.55); }
 
 /* =========================
    SERVICES / WORK WITH ME
@@ -654,7 +722,6 @@ a:hover{opacity:.92}
   gap:22px;
   align-items:start;
 }
-
 @media (max-width:900px){
   .services-split{ grid-template-columns:1fr; }
 }
@@ -708,17 +775,13 @@ a:hover{opacity:.92}
 
 /* =========================
    ABOUT PAGE
-   Quiet / editorial / filmmaker tone
 ========================= */
 
-.about-page{
-  padding-bottom:100px;
-}
+.about-page{ padding-bottom:100px; }
 
-/* Hero */
 .about-hero{
   padding:110px 0 70px;
-  max-width:720px; /* keeps text cinematic + readable */
+  max-width:720px;
 }
 
 .about-hero .h1{
@@ -734,17 +797,9 @@ a:hover{opacity:.92}
   color:rgba(245,239,234,.78);
 }
 
+.about-page .section{ padding:80px 0; }
 
-/* Sections breathe more than other pages */
-.about-page .section{
-  padding:80px 0;
-}
-
-
-/* Section titles feel editorial */
-.about-page .section-title{
-  margin-bottom:32px;
-}
+.about-page .section-title{ margin-bottom:32px; }
 
 .about-page .section-title h2{
   font-size:14px;
@@ -758,8 +813,6 @@ a:hover{opacity:.92}
   color:rgba(245,239,234,.55);
 }
 
-
-/* Cards lighter than Services page */
 .about-page .card{
   background:rgba(255,255,255,0.02);
   border:1px solid rgba(245,239,234,0.08);
@@ -786,31 +839,16 @@ a:hover{opacity:.92}
   color:rgba(245,239,234,.72);
 }
 
-
-/* CTA section feels slightly elevated */
 .about-cta .card{
   text-align:center;
   padding:38px;
 }
 
-
-/* tighten grid on larger screens for cleaner reading */
 @media (min-width:1100px){
-  .about-page .grid{
-    gap:20px;
-  }
+  .about-page .grid{ gap:20px; }
 }
 
-
-/* mobile adjustments */
 @media (max-width:700px){
-
-  .about-hero{
-    padding:80px 0 40px;
-  }
-
-  .about-page .section{
-    padding:56px 0;
-  }
-
+  .about-hero{ padding:80px 0 40px; }
+  .about-page .section{ padding:56px 0; }
 }
