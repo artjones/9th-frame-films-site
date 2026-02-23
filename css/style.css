@@ -87,6 +87,8 @@ a:hover{opacity:.92}
     gap:12px;
     justify-content:flex-end;
   }
+}
+
 /* =========================
    Buttons — Outline (Cinema)
    (GLOBAL button style)
@@ -972,4 +974,4 @@ a:hover{opacity:.92}
 .form-status.error { color: var(--record-red); }
 
 .status.info,
-.form-status.info { color: rgba(245,239,234,0.78); }
+  .form-status.info  { color: rgba(245,239,234,0.78); }
